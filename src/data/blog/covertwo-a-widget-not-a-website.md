@@ -9,7 +9,7 @@ tags:
 
 Watching the NFL from Central Europe is a timezone puzzle. The early Sunday games kick off at 19:00. The late window is around 22:25. Sunday Night Football starts at 02:20, which is either dedication or a medical condition.
 
-Every scoreboard I found was a *website*. Ads, autoplay video, news, betting odds, and somewhere under all of it, the score. I wanted one row per game. That's it.
+Every scoreboard I found was a _website_. Ads, autoplay video, news, betting odds, and somewhere under all of it, the score. I wanted one row per game. That's it.
 
 So I built [covertwo](https://moudlajs.github.io/covertwo/).
 
