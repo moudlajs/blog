@@ -106,7 +106,7 @@ Because here's what I learned: fantasy football is 40% skill, 30% luck, and 30% 
 
 But man, what a ride.
 
-_Danny_
+_Dan_
 _Brno, Czech Republic_
 _"Champion" (sort of)_
 _Fourth Place Finisher (painfully)_
