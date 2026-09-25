@@ -30,6 +30,7 @@ const projects = await Promise.all(
                   class="hover:underline hover:decoration-dashed hover:underline-offset-4"
                 >
                   {p.name}
+                  <span class="sr-only">(opens in new tab)</span>
                 </a>
               </h2>
               {p.release && (
@@ -52,7 +53,8 @@ const projects = await Promise.all(
                   rel="noopener noreferrer"
                   class="ms-auto font-mono text-xs text-accent underline decoration-dashed underline-offset-4"
                 >
-                  live ↗
+                  live <span aria-hidden="true">↗</span>
+                  <span class="sr-only">(opens in new tab)</span>
                 </a>
               )}
             </div>
