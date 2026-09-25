@@ -27,10 +27,10 @@ const firstSegment = currentPath.split("/").filter(Boolean)[0];
 const promptPath = firstSegment ? `~/${firstSegment}` : "~";
 
 const navLinks = [
-  { href: "/posts", label: "Posts" },
-  { href: "/projects", label: "Projects" },
-  ...(SITE.showBooks ? [{ href: "/books", label: "Books" }] : []),
-  { href: "/about", label: "About" },
+  { href: "/posts", label: "posts/" },
+  { href: "/projects", label: "projects/" },
+  ...(SITE.showBooks ? [{ href: "/books", label: "books/" }] : []),
+  { href: "/about", label: "about/" },
 ];
 ---
 
@@ -94,11 +94,15 @@ const navLinks = [
                       : undefined
                 }
                 class:list={[
-                  "nav-parallelogram block px-3 py-2 font-semibold whitespace-nowrap sm:py-1",
-                  { "text-accent": isActive(link.href) },
+                  "block px-3 py-2 font-medium whitespace-nowrap transition-colors hover:text-accent sm:px-2 sm:py-1",
+                  {
+                    "underline decoration-2 underline-offset-8": isActive(
+                      link.href
+                    ),
+                  },
                 ]}
               >
-                <span>{link.label}</span>
+                {link.label}
               </a>
             </li>
           ))
