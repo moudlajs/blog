@@ -149,10 +149,14 @@ html[data-theme="dark"] {
   z-index: 1;
 }
 
-.nav-parallelogram:hover::before {
-  opacity: 1;
-}
+/* Only on devices with a real pointer: on touch screens :hover sticks after a
+   tap and the shape would stay on the tapped item. */
+@media (hover: hover) {
+  .nav-parallelogram:hover::before {
+    opacity: 1;
+  }
 
-.nav-parallelogram:hover {
-  color: var(--color-background);
+  .nav-parallelogram:hover {
+    color: var(--color-background);
+  }
 }
