@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I'm Dan, a DevOps engineer from Slovakia, based in Brno.
+Hey, I'm Dan, Cloud Infrastructure engineer by day, fantasy football analyst by night. Based in Brno, I write about infrastructure, networking, weird bugs that shouldn't exist, and why my waiver wire strategy needs work. This blog is part technical documentation, part sports rant, and entirely influenced by my dog's disapproving stares. You've been warned.
 
 ## What ends up here
 
