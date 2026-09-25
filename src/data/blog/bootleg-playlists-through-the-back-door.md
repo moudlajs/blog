@@ -14,13 +14,13 @@ It isn't. The official way to talk to Apple Music from code is MusicKit, and Mus
 
 The Apple Music web player at music.apple.com doesn't pay that fee every time you open it. It already has a developer token, and while you're signed in, it has your user token too. You can see both in the browser's DevTools, sitting in the request headers.
 
-So [bootleg](https://github.com/moudlajs/bootleg) reuses them. You copy the two tokens into a `.env` file once, and it calls the same endpoints the web player calls:
+So [bootleg](https://github.com/moudlajs/bootleg) reuses them. You copy the two tokens into a `.env` file (the user token needs refreshing now and then), and it calls the same endpoints the web player calls:
 
 ```sh
 bootleg -name "Road trip" roadtrip.txt
 ```
 
-One song per line, `Artist - Title`. It searches the catalog for each line, creates the playlist in one request, and writes anything it couldn't match to `unmatched.txt` so you can fix it and run again.
+One song per line, `Artist - Title`. It searches the catalog for each line, creates the playlist in one request, and writes anything it couldn't match to `unmatched.txt` so you can fix it and add the rest to the same playlist with `-playlist-id`.
 
 ## Matching is the real work
 

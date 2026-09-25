@@ -17,7 +17,7 @@ Tapping through every league to work that out takes longer than the waiver windo
 
 ## The idea
 
-[waiverwatch](https://github.com/moudlajs/waiverwatch) is an MCP server for Sleeper. MCP is the standard way to give an AI assistant tools. Instead of building another app, I give Claude a few tools that read my leagues, and then I just ask in plain words, on the laptop or on the phone.
+[waiverwatch](https://github.com/moudlajs/waiverwatch) is an MCP server for Sleeper. MCP is the standard way to give an AI assistant tools. Instead of building another app, I give Claude a few tools that read my leagues, and then I'll just ask in plain words, on the laptop or the phone.
 
 Claude is the interface. There's no website to build and no app to maintain.
 

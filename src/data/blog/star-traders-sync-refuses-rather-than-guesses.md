@@ -44,7 +44,7 @@ It's the same lesson as incident response at work: the dangerous systems aren't 
 
 ## Also: a doctor
 
-`sts doctor` checks everything the sync needs, in order: bash, rsync, the config, the SSH key, the connection to the hub. It doesn't stop at the first problem, and it prints the exact command to fix each one. It's read-only, so it's always safe to run.
+`sts doctor` checks everything the sync needs, in order: bash, rsync, the config, the SSH key, the connection to the hub. It doesn't stop at the first problem (it only skips checks that depend on a broken one), and it prints the exact command to fix each one. It's read-only, so it's always safe to run.
 
 ---
 

@@ -21,9 +21,9 @@ That's the whole product. A widget, not a website.
 
 ## The one annoying part
 
-The scores come from ESPN's public scoreboard API. It works fine from a terminal. From a browser on another site, it refuses: no CORS headers, so the browser blocks the response.
+The scores come from ESPN's public scoreboard API. It works fine from a terminal. From a browser on another site, ESPN's bot protection answers with a 403, so the browser never gets the data.
 
-The fix is a tiny Cloudflare Worker. The page asks the Worker, the Worker asks ESPN, caches the answer for about 15 seconds, and adds the headers the browser wants. Free tier, a few dozen lines, and ESPN sees one request per 15 seconds instead of one per open tab.
+The fix is a tiny Cloudflare Worker. The page asks the Worker, the Worker asks ESPN, caches the answer for about 15 seconds, and adds the headers the browser wants. Free tier, a few dozen lines, and ESPN sees roughly one request per 15 seconds per region instead of one per open tab.
 
 Everything else is a static React app on GitHub Pages.
 
@@ -31,7 +31,7 @@ Everything else is a static React app on GitHub Pages.
 
 It has unit tests, and Playwright end-to-end tests on mobile and desktop that run against a saved copy of ESPN's data, so CI never calls the real API. Every change goes through a pull request and a review before it lands, and releases are cut automatically from the commit titles.
 
-That sounds like a lot for a scoreboard. It's also why it moved fast: about 20 releases in its first two days, from v0.1.0 to v1.13.
+That sounds like a lot for a scoreboard. It's also why it moved fast: about 20 releases in its first two days, from v0.1.0 to v1.13.1.
 
 ---
 

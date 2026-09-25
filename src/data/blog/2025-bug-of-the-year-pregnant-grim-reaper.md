@@ -15,19 +15,19 @@ The award for the Weirdest Bug of 2025 goes to _The Sims 4_, for the summer when
 
 ### An Unexpected Baby Boom
 
-In July 2025, around the _Enchanted by Nature_ expansion, players started noticing that their Sims were pregnant. Lots of them. Men. Teenagers. Sims who had never so much as looked at a double bed.
+In July 2025, after a base-game patch released just before the _Enchanted by Nature_ expansion, players started noticing that their Sims were pregnant. Lots of them. Men. Teenagers. Sims who had never so much as looked at a double bed.
 
 And pregnant Sims come with rules. They can't take a pregnancy test (they're already pregnant, apparently), they can't age up, and they can't woo-hoo. So households froze in place: nobody got older, and no new babies were on the way, despite everyone technically having one on the way.
 
 ### The Vampire Famine
 
-The best part was the side effect. In _The Sims 4_, vampires aren't allowed to drink from pregnant Sims. When everyone in town is flagged as pregnant, a vampire walks into a world that is one big buffet, fully locked. Vampire players had to use cheats to keep their undead from starving.
+The best part was the side effect. In _The Sims 4_, vampires aren't allowed to drink from pregnant Sims. When everyone in town is flagged as pregnant, a vampire walks into a world that is one big buffet, fully locked. At least one vampire player had to use cheats to keep theirs from starving.
 
 ### How Does This Even Happen?
 
-EA acknowledged it was "actively investigating issues related to Sim pregnancy" and asked players for save files. The fix came later, and the cause turned out to be delightfully boring: **performance optimizations**.
+EA acknowledged it was "actively investigating issues related to Sim pregnancy" and asked players for save files. The fix came about two and a half weeks later, and the cause turned out to be delightfully boring: **performance optimizations**.
 
-That's the most relatable part of the whole story. Somebody made the game faster, and a check somewhere stopped doing what it used to do. Every engineer has shipped that change. Most of us just didn't get the whole internet laughing about it.
+That's the most relatable part of the whole story. Somebody made the game faster, and something in the save data quietly started saying "pregnant". Every engineer has shipped that change. Most of us just didn't get the whole internet laughing about it.
 
 As we ring in the new year, let's raise a glass to the developers who had to debug a town full of pregnant men and starving vampires. It's a perfect reminder that no matter how carefully we build our systems, a little chaos will always find a way in. Usually through the performance work.
 

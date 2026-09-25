@@ -13,19 +13,19 @@ A lot of the code in my projects is now written with Claude. That's fast, and it
 
 ## The loop
 
-Every repo follows the same flow:
+My new repos follow the same flow:
 
 1. **An issue first.** Even for small things. It's the note that says why.
 2. **A branch and a draft pull request.** CI runs on every push: lint, types, tests, build.
-3. **Ready for review.** Marking the PR ready triggers a separate Claude instance in GitHub Actions. It didn't write the code and it only sees the diff, so it reviews it cold.
+3. **Ready for review.** Marking the PR ready triggers a separate Claude instance in GitHub Actions. It didn't write the code and starts with none of the author's context, so it reviews it cold.
 4. **Every comment gets an answer.** Fixed, or not fixing and why, or a follow-up issue.
-5. **Squash merge.** The PR title becomes the commit, and release-please turns those titles into versions and a changelog.
+5. **Squash merge.** The PR title becomes the commit, and releases are cut from those titles (release-please in most repos).
 
 ## Why a second model helps
 
 The one who writes the code is the worst person to review it. That's true for me, and it's true for a model. The author already "knows" what the code is meant to do and reads that into it.
 
-A fresh reviewer doesn't. In [bootleg](https://github.com/moudlajs/bootleg), reviews found holes in the review gate itself: a push racing the "ready" click could let a pull request pass without being reviewed at all. Another time a PR labelled "docs only" was quietly changing behaviour, and the review said so, so it got split into its own PR. Small things. The kind that become a bad evening later.
+A fresh reviewer doesn't. In [bootleg](https://github.com/moudlajs/bootleg), a push racing the "ready" click once let a pull request pass without any review. While fixing that, the reviews of the fix found more holes in the gate itself. Another time a PR labelled "docs only" was quietly changing behaviour, and the review said so, so it got split into its own PR. Small things. The kind that become a bad evening later.
 
 ## What it costs
 
@@ -35,4 +35,4 @@ It's also the most DevOps thing in my life that isn't my job. Pipelines, reviews
 
 ---
 
-_P.S. - This blog was the last holdout. It had commits straight to main. It now goes through the same loop._
+_P.S. - This blog was the last holdout. It had commits straight to main. It now goes through pull requests too, and gets the reviewer next._

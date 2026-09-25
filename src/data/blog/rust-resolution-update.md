@@ -15,12 +15,12 @@ It's late September. Time for an honest status report.
 
 ## What I shipped in 2026
 
-I checked my GitHub. This year I shipped side projects in:
+I checked my public GitHub. This year I shipped side projects in:
 
-- **Go.** A tool that turns a text file into an Apple Music playlist, and a fantasy football server for Claude.
+- **Go.** A tool that turns a text file into an Apple Music playlist, and the start of a fantasy football server for Claude.
 - **TypeScript.** An NFL scoreboard.
 - **Bash.** A save-game sync for two Macs. In bash 3.2, a version from 2006.
-- **C#.** A command-line tool for my homelab.
+- **C#.** New releases of a command-line tool for my homelab.
 
 Lines of Rust: **zero**.
 
