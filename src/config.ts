@@ -3,7 +3,7 @@ export const SITE = {
   author: "Daniel Czetner",
   profile: "https://github.com/moudlajs",
   desc: "DevOps, side projects, weird bugs and fantasy football.",
-  title: "DeeCee's blog",
+  title: "dan@blog",
   lightAndDarkMode: true,
   postPerIndex: 6,
   postPerPage: 20,
