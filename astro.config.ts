@@ -15,7 +15,10 @@ import { SITE } from "./src/config";
 // at a domain root or under a sub-path (e.g. moudlajs.github.io/blog/).
 const site = process.env.SITE_URL || SITE.website;
 const base = process.env.BASE_PATH || "/";
-const baseNoSlash = base.replace(/\/+$/, "");
+// "/blog/", "blog", "/blog" all become "/blog"; "/" becomes "".
+const baseNoSlash = base.replace(/^\/+|\/+$/g, "")
+  ? "/" + base.replace(/^\/+|\/+$/g, "")
+  : "";
 
 // Rewrites root-relative links in Markdown ("/projects/") to include the base.
 const rehypeBaseLinks = () => (tree: unknown) => {
@@ -33,6 +36,7 @@ const rehypeBaseLinks = () => (tree: unknown) => {
       href.startsWith("/") &&
       !href.startsWith("//") &&
       baseNoSlash &&
+      href !== baseNoSlash &&
       !href.startsWith(baseNoSlash + "/")
     ) {
       node.properties!.href = baseNoSlash + href;
