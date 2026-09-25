@@ -3,13 +3,13 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I'm Danny, DeeCee on the internet. A DevOps engineer who grew up in Slovakia, lives in Brno, and spends too much time on two things: infrastructure and fantasy football.
+I'm Danny, DeeCee on the internet. A DevOps engineer from Slovakia, based in Brno, who spends too much time on two things: infrastructure and fantasy football.
 
 ## What ends up here
 
 - **Tech.** Pipelines, cloud, security, and bugs too weird not to write down.
 - **Side projects.** Small tools I build after hours because something annoyed me. They're all on the [projects page](/projects/) and on [GitHub](https://github.com/moudlajs).
-- **Fantasy football.** I learned American football from _The Wire_, so naturally I'm a Ravens fan. I play on Sleeper, in more leagues than is healthy: two dynasties, a few redrafts, and survival leagues where the lowest score gets cut every week.
+- **Fantasy football.** _The Wire_ is set in Baltimore, so when I got into the NFL, the Ravens were the only possible choice. I play on Sleeper, in more leagues than is healthy: two dynasties, a few redrafts, and survival leagues where the lowest score gets cut every week.
 - **Fun stuff.** Short posts about whatever made me laugh that week.
 
 ## Why this exists
