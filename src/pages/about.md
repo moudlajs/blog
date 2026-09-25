@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I'm Danny, a DevOps engineer from Slovakia, based in Brno.
+I'm Dan, a DevOps engineer from Slovakia, based in Brno.
 
 ## What ends up here
 

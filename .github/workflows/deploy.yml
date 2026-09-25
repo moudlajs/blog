@@ -5,6 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Daily rebuild so posts with a future pubDatetime appear on their date.
+  schedule:
+    - cron: "17 5 * * *"
 
 permissions:
   contents: read
