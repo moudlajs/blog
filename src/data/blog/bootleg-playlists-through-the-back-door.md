@@ -1,6 +1,6 @@
 ---
 title: "Bootlegging My Own Playlists"
-pubDatetime: 2026-09-25T06:30:00Z
+pubDatetime: 2026-09-24T19:15:00Z
 description: "Apple wants a paid developer account before you can create a playlist from code. The Apple Music web player already has everything it needs. So bootleg borrows it."
 tags:
   - side-projects

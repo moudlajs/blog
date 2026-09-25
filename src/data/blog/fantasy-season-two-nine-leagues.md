@@ -1,6 +1,6 @@
 ---
 title: "Season Two: Nine Leagues, Zero Chill"
-pubDatetime: 2026-09-25T09:00:00Z
+pubDatetime: 2026-09-27T08:30:00Z
 description: "Last year I played two leagues. This year I'm in nine. A progress report from Week 3, and a confession."
 draft: true
 tags:

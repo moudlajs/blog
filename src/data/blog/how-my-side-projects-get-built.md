@@ -1,6 +1,6 @@
 ---
 title: "My Side Projects Get Code Review Now"
-pubDatetime: 2026-09-25T08:00:00Z
+pubDatetime: 2026-10-01T17:10:00Z
 description: "Every hobby project of mine now runs like a small team: an issue, a draft pull request, CI, and a reviewer that didn't write the code."
 tags:
   - devops

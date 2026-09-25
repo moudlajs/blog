@@ -1,6 +1,6 @@
 ---
 title: "Software That Refuses Rather Than Guesses"
-pubDatetime: 2026-09-25T07:00:00Z
+pubDatetime: 2026-09-20T17:40:00Z
 description: "Star Traders: Frontiers has no working cloud save on macOS. My fix syncs saves between two Macs, and its best feature is saying no."
 tags:
   - side-projects

@@ -1,6 +1,6 @@
 ---
 title: "All My Sleeper Leagues in One Question"
-pubDatetime: 2026-09-25T07:30:00Z
+pubDatetime: 2026-09-26T18:20:00Z
 description: "The Sleeper app shows one league at a time. On a Sunday with injuries flying, that's too slow. I'm building waiverwatch so I can just ask Claude."
 tags:
   - side-projects

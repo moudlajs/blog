@@ -1,6 +1,6 @@
 ---
 title: "I Never Promised to Learn Rust. I Learned Go."
-pubDatetime: 2026-09-25T08:30:00Z
+pubDatetime: 2026-10-06T18:05:00Z
 description: "My January post on failed tech resolutions ended with a joke promise to learn Rust. It stayed a joke. Here's what I got into instead."
 tags:
   - humor
