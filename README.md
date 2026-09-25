@@ -2,7 +2,7 @@
 
 Personal blog built with Astro Paper theme. DevOps engineering, fantasy football analysis, and technical writing.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-## 📝 Writing Posts
+## Writing Posts
 
 1. Create a new `.md` file in `src/data/blog/`
 2. Add frontmatter:
@@ -38,7 +38,7 @@ tags:
 3. Write your content in Markdown
 4. Push to GitHub - CI/CD will deploy automatically
 
-## 🎨 Customization
+## Customization
 
 - **Theme colors**: `src/styles/global.css` (light/dark mode variables)
 - **Site config**: `src/config.ts` (title, description, timezone)
@@ -47,17 +47,17 @@ tags:
 - **Books**: `src/pages/[books].astro`, published only when `SITE.showBooks` is true
 - **Header/Nav**: `src/components/Header.astro`
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Astro](https://astro.build/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Comments**: [Giscus](https://giscus.app/) (GitHub Discussions)
 - **Deployment**: GitHub Pages + GitHub Actions
 
-## 📚 More Info
+## More Info
 
 See `ASTRO_GUIDE.md` for detailed customization and debugging guide.
 
-## 📜 License
+## License
 
 Based on [AstroPaper theme](https://github.com/satnaing/astro-paper) by Sat Naing.
