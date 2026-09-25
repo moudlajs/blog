@@ -9,6 +9,7 @@ import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
+import { withBase } from "@/utils/withBase";
 import getUniqueTags from "@/utils/getUniqueTags";
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -29,7 +30,7 @@ const tags = getUniqueTags(await getCollection("blog"));
           {tags.map(({ tag, tagName }) => (
             <li>
               <a
-                href={`/tags/${tag}/`}
+                href={withBase(`/tags/${tag}/`)}
                 class="inline-block rounded-md border border-border px-2 py-0.5 transition-colors hover:border-accent hover:text-accent"
               >
                 #{tagName}
