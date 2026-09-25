@@ -9,7 +9,7 @@ I'm Danny, DeeCee on the internet. A DevOps engineer who grew up in Slovakia, li
 
 - **Tech.** Pipelines, cloud, security, and bugs too weird not to write down.
 - **Side projects.** Small tools I build after hours because something annoyed me. They're all on the [projects page](/projects/) and on [GitHub](https://github.com/moudlajs).
-- **Fantasy football.** I learned American football from _The Wire_, so naturally I'm a Ravens fan. I play on Sleeper, one dynasty league I care about far too much plus a redraft league or two.
+- **Fantasy football.** I learned American football from _The Wire_, so naturally I'm a Ravens fan. I play on Sleeper, in more leagues than is healthy: two dynasties, a few redrafts, and survival leagues where the lowest score gets cut every week.
 - **Fun stuff.** Short posts about whatever made me laugh that week.
 
 ## Why this exists
