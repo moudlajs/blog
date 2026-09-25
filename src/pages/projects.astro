@@ -25,6 +25,8 @@ const projects = await Promise.all(
               <h2 class="text-lg font-semibold text-accent">
                 <a
                   href={`https://github.com/${p.repo}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="hover:underline hover:decoration-dashed hover:underline-offset-4"
                 >
                   {p.name}
@@ -46,9 +48,11 @@ const projects = await Promise.all(
               {p.live && (
                 <a
                   href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="ms-auto font-mono text-xs text-accent underline decoration-dashed underline-offset-4"
                 >
-                  live →
+                  live ↗
                 </a>
               )}
             </div>
