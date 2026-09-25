@@ -16,6 +16,11 @@ export const SITE = {
     url: "https://github.com/moudlajs/blog/edit/main/",
   },
   showBooks: false, // the bookshelf is ready; flip to publish /books and its nav link
+  // Cloudflare Web Analytics token (public; it ends up in every page's source).
+  // Get it from the Cloudflare dashboard: Analytics & Logs > Web Analytics >
+  // your site > "Manage site" > JS snippet, the value of "token" in
+  // data-cf-beacon. Set it to "CF_BEACON_TOKEN_HERE" to switch the beacon off.
+  cfBeaconToken: "647ef9fbab3e49b08b56a843813221c4",
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
