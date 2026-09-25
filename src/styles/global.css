@@ -127,3 +127,32 @@ html[data-theme="dark"] {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+/* Parallelogram hover effect for nav items */
+.nav-parallelogram {
+  position: relative;
+}
+
+.nav-parallelogram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+.nav-parallelogram span {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-parallelogram:hover::before {
+  opacity: 1;
+}
+
+.nav-parallelogram:hover {
+  color: var(--color-background);
+}

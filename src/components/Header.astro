@@ -27,10 +27,10 @@ const firstSegment = currentPath.split("/").filter(Boolean)[0];
 const promptPath = firstSegment ? `~/${firstSegment}` : "~";
 
 const navLinks = [
-  { href: "/posts", label: "posts/" },
-  { href: "/projects", label: "projects/" },
-  ...(SITE.showBooks ? [{ href: "/books", label: "books/" }] : []),
-  { href: "/about", label: "about/" },
+  { href: "/posts", label: "Posts" },
+  { href: "/projects", label: "Projects" },
+  ...(SITE.showBooks ? [{ href: "/books", label: "Books" }] : []),
+  { href: "/about", label: "About" },
 ];
 ---
 
@@ -58,8 +58,7 @@ const navLinks = [
         class="font-mono text-base font-semibold whitespace-nowrap sm:text-xl"
         aria-hidden="true"
       >
-        <span class="max-[380px]:hidden">dan@czetner:</span><span
-          class="text-accent">{promptPath}</span
+        <span>dan@blog:</span><span class="text-accent">{promptPath}</span
         >$<span class="prompt-cursor"></span>
       </span>
     </a>
@@ -94,15 +93,11 @@ const navLinks = [
                       : undefined
                 }
                 class:list={[
-                  "block px-3 py-2 font-medium whitespace-nowrap transition-colors hover:text-accent sm:px-2 sm:py-1",
-                  {
-                    "underline decoration-2 underline-offset-8": isActive(
-                      link.href
-                    ),
-                  },
+                  "nav-parallelogram block px-3 py-2 font-semibold whitespace-nowrap sm:py-1",
+                  { "text-accent": isActive(link.href) },
                 ]}
               >
-                {link.label}
+                <span>{link.label}</span>
               </a>
             </li>
           ))
