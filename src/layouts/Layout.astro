@@ -30,6 +30,14 @@ const {
   scrollSmooth = false,
 } = Astro.props;
 
+// Only production builds with a real token get the analytics beacon, so the
+// dev server and the placeholder never send anything.
+const cfBeaconToken: string = SITE.cfBeaconToken;
+const showCfBeacon =
+  import.meta.env.PROD &&
+  cfBeaconToken &&
+  cfBeaconToken !== "CF_BEACON_TOKEN_HERE";
+
 const socialImageURL = new URL(ogImage, Astro.url);
 
 const structuredData = {
@@ -137,6 +145,16 @@ const structuredData = {
   </head>
   <body>
     <slot />
+    {
+      showCfBeacon && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+        />
+      )
+    }
   </body>
 </html>
 
