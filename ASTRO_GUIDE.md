@@ -422,7 +422,6 @@ Responsive:
 
 ```css
 .nav-parallelogram       /* Navbar hover effect */
-.article-hover-bg        /* Article title hover (unused now) */
 .active-nav              /* Active nav indicator */
 ```
 

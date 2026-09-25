@@ -66,7 +66,7 @@ export async function getLatestRelease(
   try {
     const res = await fetch(
       `https://api.github.com/repos/${repo}/releases/latest`,
-      { headers }
+      { headers, signal: AbortSignal.timeout(5000) }
     );
     return res.ok ? (await res.json()).tag_name : undefined;
   } catch {

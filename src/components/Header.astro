@@ -81,7 +81,13 @@ const navLinks = [
             <li>
               <a
                 href={link.href}
-                aria-current={isActive(link.href) ? "page" : undefined}
+                aria-current={
+                  currentPath === link.href
+                    ? "page"
+                    : isActive(link.href)
+                      ? "true"
+                      : undefined
+                }
                 class:list={[
                   "nav-parallelogram block px-3 py-2 font-semibold whitespace-nowrap sm:py-1",
                   { "text-accent": isActive(link.href) },
