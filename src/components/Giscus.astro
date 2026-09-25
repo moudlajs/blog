@@ -6,12 +6,18 @@
 // 3. Go to https://giscus.app/ to get your configuration
 // 4. Replace the values below with your own
 
+import { stripBase } from "@/utils/withBase";
+
+const term = stripBase(Astro.url.pathname).replace(/^\/+|\/+$/g, "");
+
 const GISCUS_CONFIG = {
   repo: "moudlajs/blog",
   repoId: "R_kgDOQyBeiQ",
   category: "General",
   categoryId: "DIC_kwDOQyBeic4C0dGN",
-  mapping: "pathname",
+  // "specific" with a base-free term keeps each post's thread the same whether
+  // the site lives at a domain root or under /blog/.
+  mapping: "specific",
   reactionsEnabled: "1",
   emitMetadata: "0",
   inputPosition: "bottom",
@@ -29,6 +35,7 @@ const GISCUS_CONFIG = {
     data-category={GISCUS_CONFIG.category}
     data-category-id={GISCUS_CONFIG.categoryId}
     data-mapping={GISCUS_CONFIG.mapping}
+    data-term={term}
     data-strict="0"
     data-reactions-enabled={GISCUS_CONFIG.reactionsEnabled}
     data-emit-metadata={GISCUS_CONFIG.emitMetadata}

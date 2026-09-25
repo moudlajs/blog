@@ -9,6 +9,7 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { getPath } from "@/utils/getPath";
+import { withBase } from "@/utils/withBase";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
@@ -120,7 +121,7 @@ const nextPost =
         {
           tags.map(tag => (
             <a
-              href={`/tags/${slugifyStr(tag)}/`}
+              href={withBase(`/tags/${slugifyStr(tag)}/`)}
               class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent"
             >
               #{tag}
