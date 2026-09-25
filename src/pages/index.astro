@@ -8,6 +8,7 @@ import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
+import { withBase } from "@/utils/withBase";
 import LinkButton from "@/components/LinkButton.astro";
 import Socials from "@/components/Socials.astro";
 import IconRss from "@/assets/icons/IconRss.svg";
@@ -31,7 +32,7 @@ const sortedPosts = getSortedPosts(posts);
       <div class="mt-5 flex flex-wrap items-center gap-x-1 gap-y-2">
         <Socials />
         <a
-          href="/rss.xml"
+          href={withBase("/rss.xml")}
           class="p-2 hover:rotate-6 sm:p-1"
           aria-label="Subscribe via RSS"
           title="Subscribe via RSS"
@@ -56,7 +57,7 @@ const sortedPosts = getSortedPosts(posts);
             )}
           </ul>
           <LinkButton
-            href="/posts/"
+            href={withBase("/posts/")}
             class="font-mono text-sm hover:text-accent"
           >
             All posts
@@ -74,7 +75,7 @@ const sortedPosts = getSortedPosts(posts);
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset?.layout;
     if (indexLayout) {
-      sessionStorage.setItem("backUrl", "/");
+      sessionStorage.setItem("backUrl", import.meta.env.BASE_URL);
     }
   });
 </script>

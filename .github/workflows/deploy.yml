@@ -46,6 +46,11 @@ jobs:
         run: pnpm run build
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          # Where the site lives. For moudlajs.github.io/blog/ these are
+          # SITE_URL=https://moudlajs.github.io and BASE_PATH=/blog/; for a
+          # custom domain, SITE_URL=https://<domain> and BASE_PATH=/ (or unset).
+          SITE_URL: ${{ vars.SITE_URL }}
+          BASE_PATH: ${{ vars.BASE_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

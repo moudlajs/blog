@@ -7,11 +7,12 @@ import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 import postFilter from "@/utils/postFilter";
+import { withBase } from "@/utils/withBase";
 import { SITE } from "@/config";
 
 // Redirect to 404 page if `showArchives` config is false
 if (!SITE.showArchives) {
-  return Astro.redirect("/404");
+  return Astro.redirect(withBase("/404"));
 }
 
 const posts = await getCollection("blog", postFilter);

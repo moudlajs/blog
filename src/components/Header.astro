@@ -7,8 +7,9 @@ import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
 import { SITE } from "@/config";
+import { withBase, stripBase } from "@/utils/withBase";
 
-const { pathname } = Astro.url;
+const pathname = stripBase(Astro.url.pathname);
 
 // Remove trailing slash from current pathname if exists
 const currentPath =
@@ -46,9 +47,13 @@ const navLinks = [
     id="nav-container"
     class="mx-auto flex max-w-app flex-wrap items-center justify-between gap-y-2 px-4 py-5 sm:py-8"
   >
-    <a href="/" aria-label="Home" class="group inline-flex items-center gap-3">
+    <a
+      href={withBase("/")}
+      aria-label="Home"
+      class="group inline-flex items-center gap-3"
+    >
       <img
-        src="/avatar.jpeg"
+        src={withBase("/avatar.jpeg")}
         alt=""
         width="56"
         height="56"
@@ -84,7 +89,7 @@ const navLinks = [
           navLinks.map(link => (
             <li>
               <a
-                href={link.href}
+                href={withBase(link.href)}
                 aria-current={
                   currentPath === link.href
                     ? "page"
@@ -104,7 +109,7 @@ const navLinks = [
         }
         <li class="flex items-center gap-2 max-sm:mt-1 max-sm:px-1">
           <LinkButton
-            href="/search"
+            href={withBase("/search")}
             class:list={[
               "focus-outline flex p-2",
               { "[&>svg]:stroke-accent": isActive("/search") },

@@ -1,6 +1,7 @@
 ---
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 import { SITE } from "@/config";
+import { withBase } from "@/utils/withBase";
 import "@fontsource-variable/ibm-plex-sans";
 import "@fontsource-variable/jetbrains-mono";
 import "@/styles/global.css";
@@ -22,12 +23,20 @@ const {
   author = SITE.author,
   profile = SITE.profile,
   description = SITE.desc,
-  ogImage = "/og.png",
+  ogImage = withBase("/og.png"),
   canonicalURL = new URL(Astro.url.pathname, Astro.url),
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
 } = Astro.props;
+
+// Only production builds with a real token get the analytics beacon, so the
+// dev server and the placeholder never send anything.
+const cfBeaconToken: string = SITE.cfBeaconToken;
+const showCfBeacon =
+  import.meta.env.PROD &&
+  cfBeaconToken &&
+  cfBeaconToken !== "CF_BEACON_TOKEN_HERE";
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
@@ -57,7 +66,7 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/jpeg" href="/avatar.jpeg" />
+    <link rel="icon" type="image/jpeg" href={withBase("/avatar.jpeg")} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -66,7 +75,7 @@ const structuredData = {
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href={withBase("/sitemap-index.xml")} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
@@ -112,7 +121,7 @@ const structuredData = {
       rel="alternate"
       type="application/rss+xml"
       title={SITE.title}
-      href={new URL("rss.xml", Astro.site)}
+      href={new URL(withBase("/rss.xml"), Astro.site)}
     />
 
     <meta name="theme-color" content="" />
@@ -132,10 +141,20 @@ const structuredData = {
     <!-- ViewTransitions disabled - add back if needed -->
     <!-- <ViewTransitions /> -->
 
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline src={withBase("/toggle-theme.js")}></script>
   </head>
   <body>
     <slot />
+    {
+      showCfBeacon && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+        />
+      )
+    }
   </body>
 </html>
 
