@@ -1,10 +1,9 @@
 export const SITE = {
-  website: "https://danielczetner.com/", // Your custom domain (or use https://moudlajs.github.io/my-blog/ for GitHub Pages default)
+  website: "https://danielczetner.com/",
   author: "Daniel Czetner",
   profile: "https://github.com/moudlajs",
-  desc: "DevOps engineer, fantasy football analyst, and occasional writer. Based in Brno, Czech Republic.",
+  desc: "DevOps, side projects, weird bugs and fantasy football.",
   title: "DeeCee's blog",
-  ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
@@ -12,10 +11,11 @@ export const SITE = {
   showArchives: true,
   showBackButton: true, // show back button in post detail
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit page",
-    url: "https://github.com/moudlajs/my-blog/edit/main/",
+    url: "https://github.com/moudlajs/blog/edit/main/",
   },
+  showBooks: false, // the bookshelf is ready; flip to publish /books and its nav link
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"

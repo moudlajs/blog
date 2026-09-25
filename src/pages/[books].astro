@@ -1,0 +1,127 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import { Image } from "astro:assets";
+import { SITE } from "@/config";
+import ostep from "@/assets/books/ostep.jpg";
+import tlpi from "@/assets/books/tlpi.jpg";
+import csapp from "@/assets/books/csapp.jpg";
+import ddia from "@/assets/books/ddia.jpg";
+import cleanCode from "@/assets/books/clean-code.jpg";
+import mythicalManMonth from "@/assets/books/mythical-man-month.jpg";
+import sicp from "@/assets/books/sicp.jpg";
+import codeComplete from "@/assets/books/code-complete.jpg";
+import refactoring from "@/assets/books/refactoring.jpg";
+import sre from "@/assets/books/sre.jpg";
+
+// Dynamic only so the page can be switched off: with SITE.showBooks false
+// no path is generated and /books does not exist.
+export function getStaticPaths() {
+  return SITE.showBooks ? [{ params: { books: "books" } }] : [];
+}
+
+const books = [
+  {
+    title: "Operating Systems: Three Easy Pieces",
+    author: "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau",
+    cover: ostep,
+    opinion:
+      "An incredibly clear and comprehensive introduction to operating systems. A must-read for anyone diving into OS development.",
+  },
+  {
+    title: "The Linux Programming Interface",
+    author: "Michael Kerrisk",
+    cover: tlpi,
+    opinion:
+      "The definitive guide to Linux system programming. Every detail you could ever need, explained with precision.",
+  },
+  {
+    title: "Computer Systems: A Programmer's Perspective",
+    author: "Randal E. Bryant and David R. O'Hallaron",
+    cover: csapp,
+    opinion:
+      "A fantastic book that bridges the gap between high-level programming and low-level system understanding. Essential for any serious programmer.",
+  },
+  {
+    title: "Designing Data-Intensive Applications",
+    author: "Martin Kleppmann",
+    cover: ddia,
+    opinion:
+      "An absolute masterpiece for understanding distributed systems and data storage. Highly recommended for architects and senior engineers.",
+  },
+  {
+    title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+    author: "Robert C. Martin",
+    cover: cleanCode,
+    opinion:
+      "A foundational text for writing maintainable and readable code. Some ideas are debated, but the core principles are invaluable.",
+  },
+  {
+    title: "The Mythical Man-Month",
+    author: "Frederick Brooks Jr.",
+    cover: mythicalManMonth,
+    opinion:
+      "A classic in software engineering management. Its insights on project management and team dynamics are still relevant decades later.",
+  },
+  {
+    title: "Structure and Interpretation of Computer Programs",
+    author: "Harold Abelson and Gerald Jay Sussman",
+    cover: sicp,
+    opinion:
+      "A mind-bending journey into the fundamentals of computation. It will change how you think about programming.",
+  },
+  {
+    title: "Code Complete",
+    author: "Steve McConnell",
+    cover: codeComplete,
+    opinion:
+      "A massive, practical guide to software construction. A great reference for best practices in coding.",
+  },
+  {
+    title: "Refactoring: Improving the Design of Existing Code",
+    author: "Martin Fowler",
+    cover: refactoring,
+    opinion:
+      "The essential handbook for improving existing codebases. Teaches you how to make changes safely and effectively.",
+  },
+  {
+    title: "Site Reliability Engineering",
+    author: "Niall Richard Murphy et al.",
+    cover: sre,
+    opinion:
+      "A deep dive into how Google runs its production systems. Invaluable for anyone interested in building and operating large-scale services.",
+  },
+];
+---
+
+<Layout title={`Books | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="My Bookshelf" pageDesc="Books I'm reading or have read.">
+    <div class="space-y-6">
+      {
+        books.map(book => (
+          <div class="flex items-start gap-4 border-b border-dashed border-border py-4 last:border-b-0">
+            <Image
+              src={book.cover}
+              alt={`Cover of ${book.title}`}
+              width={192}
+              class="h-auto w-24 flex-shrink-0 rounded-sm shadow-md"
+            />
+            <div class="flex-grow">
+              <h2 class="text-xl font-semibold text-foreground">
+                {book.title}
+              </h2>
+              <p class="font-mono text-xs opacity-70">{book.author}</p>
+              <p class="mt-2 text-sm leading-relaxed italic opacity-80">
+                "{book.opinion}"
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Main>
+  <Footer />
+</Layout>

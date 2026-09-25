@@ -22,6 +22,7 @@ npm run preview
 
 1. Create a new `.md` file in `src/data/blog/`
 2. Add frontmatter:
+
 ```yaml
 ---
 title: "Your Post Title"
@@ -33,6 +34,7 @@ tags:
   - tag2
 ---
 ```
+
 3. Write your content in Markdown
 4. Push to GitHub - CI/CD will deploy automatically
 
@@ -41,8 +43,8 @@ tags:
 - **Theme colors**: `src/styles/global.css` (light/dark mode variables)
 - **Site config**: `src/config.ts` (title, description, timezone)
 - **Social links**: `src/constants.ts`
-- **Projects**: `src/pages/projects.astro` (hard-coded cards)
-- **Books**: `src/pages/books.astro`
+- **Projects**: `src/data/projects.ts` (shared by the home page and `/projects`)
+- **Books**: `src/pages/[books].astro`, published only when `SITE.showBooks` is true
 - **Header/Nav**: `src/components/Header.astro`
 
 ## 🛠️ Tech Stack

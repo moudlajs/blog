@@ -4,11 +4,11 @@ pubDatetime: 2026-01-04
 author: "Daniel Czetner"
 description: "After my first fantasy season, I started noticing some odd similarities between managing a fantasy team and handling production incidents. Here's what stuck out."
 tags:
+  - fantasy-football
   - devops
-  - nfl
 ---
 
-Somewhere around Week 10 of my first fantasy football season, I started noticing something weird. The mental gymnastics I was doing on Sunday mornings—staring at injury reports, weighing matchups, making last-minute lineup decisions—felt *uncomfortably familiar*.
+Somewhere around Week 10 of my first fantasy football season, I started noticing something weird. The mental gymnastics I was doing on Sunday mornings—staring at injury reports, weighing matchups, making last-minute lineup decisions—felt _uncomfortably familiar_.
 
 It reminded me of being on-call.
 
@@ -22,7 +22,7 @@ In fantasy, you draft based on expert projections. "This RB will get 1,200 yards
 
 Then the season starts and half your roster is injured by Week 3.
 
-In DevOps, we write runbooks. We have disaster recovery plans. We document our failover procedures. We *test* our backups.
+In DevOps, we write runbooks. We have disaster recovery plans. We document our failover procedures. We _test_ our backups.
 
 And then production goes down at 2 AM because of something that wasn't in any of those documents.
 
@@ -45,6 +45,7 @@ Fantasy football: Do you start the veteran with a tough matchup, or the rookie w
 Incident response: Do you roll back the deployment, or try to patch forward? Restart the service, or dig into the root cause first?
 
 Both require:
+
 - Quick assessment (injury reports vs. error logs)
 - Risk evaluation (upside vs. downside)
 - Committing to a decision (no second-guessing mid-execution)
@@ -68,6 +69,7 @@ You can do everything correctly and still have a bad week. One data point doesn'
 After every fantasy loss, I review: What went wrong? Should I have started someone else? Was my opponent just better? What do I change going forward?
 
 After production incidents, it's the same structure:
+
 1. Timeline of events
 2. Root cause analysis
 3. Action items
@@ -82,10 +84,10 @@ You'll never have perfect data. You'll be wrong sometimes. And you have to be ok
 
 The skill isn't in being right every time. It's in how you respond when things go sideways. Do you freeze? Or do you assess, adapt, and act?
 
-I'm not claiming fantasy football *makes you a better engineer*. But I did notice that the mental framework is surprisingly similar. Quick decision-making. Adaptability. Accepting uncertainty.
+I'm not claiming fantasy football _makes you a better engineer_. But I did notice that the mental framework is surprisingly similar. Quick decision-making. Adaptability. Accepting uncertainty.
 
 And yeah, finishing 4th in my dynasty league (after a first-round bye, no less) stung just as much as a production incident that could've been avoided. Different contexts, same flavor of regret.
 
 ---
 
-*P.S. - I also won a championship in a league where half the teams were inactive. That felt about as satisfying as fixing a bug that should never have existed in the first place. Technically a win, but hollow.*
+_P.S. - I also won a championship in a league where half the teams were inactive. That felt about as satisfying as fixing a bug that should never have existed in the first place. Technically a win, but hollow._

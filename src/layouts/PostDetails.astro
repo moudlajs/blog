@@ -56,7 +56,7 @@ if (!ogImageUrl && SITE.dynamicOgImage) {
   ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
 }
 
-// Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
+// Resolve OG image URL (or fall back to the default `og.png`)
 const ogImage = ogImageUrl
   ? new URL(ogImageUrl, Astro.url.origin).href
   : undefined;
@@ -98,16 +98,14 @@ const nextPost =
     ]}
     data-pagefind-body
   >
-    <h1
-      class="inline-block text-2xl font-bold text-accent sm:text-3xl"
-    >
+    <h1 class="inline-block text-2xl font-bold text-accent sm:text-3xl">
       {title}
     </h1>
     <div class="my-2 flex flex-col gap-y-2">
       <div class="flex flex-wrap items-center gap-x-2">
         <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
         <span aria-hidden="true" class="opacity-80">|</span>
-        <span class="opacity-80 text-sm sm:text-base">{readingTime} min</span>
+        <span class="text-sm opacity-80 sm:text-base">{readingTime} min</span>
         <span
           aria-hidden="true"
           class:list={[
@@ -117,7 +115,7 @@ const nextPost =
         >
         <EditPost {hideEditPost} {post} class="max-sm:hidden" />
       </div>
-      <div class="flex items-center flex-wrap gap-x-2">
+      <div class="flex flex-wrap items-center gap-x-2">
         <IconHash class="inline-block size-4 min-w-[1rem] opacity-80" />
         {
           tags.map(tag => (
@@ -144,8 +142,6 @@ const nextPost =
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
-
-    
 
     <BackToTopButton />
 

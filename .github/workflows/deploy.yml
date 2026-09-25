@@ -17,21 +17,32 @@ concurrency:
 
 jobs:
   build:
+    # Pages is switched off until the domain is pointed here. Set the repo
+    # variable PAGES_LIVE=true (and re-enable Pages) to start deploying.
+    if: vars.PAGES_LIVE == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build Astro site
-        run: npm run build
+        run: pnpm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

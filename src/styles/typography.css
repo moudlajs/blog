@@ -13,8 +13,14 @@
       @apply mb-3 text-foreground;
     }
 
+    h2,
     h3 {
-      @apply italic;
+      @apply tracking-tight;
+    }
+
+    p,
+    li {
+      @apply leading-relaxed;
     }
 
     p,
