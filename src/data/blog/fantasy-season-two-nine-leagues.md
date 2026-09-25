@@ -14,25 +14,25 @@ Last year was my first fantasy season: two leagues, one hollow championship and 
 
 ## The count
 
-| League                                | Type     | Teams | Record / standing     |
-| ------------------------------------- | -------- | ----- | --------------------- |
-| Dynasty 2025                          | Dynasty  | 12    | 1-1                   |
-| Crazy Dynasty 2026                    | Dynasty  | 10    | 1-1                   |
-| NFL.cz komunitní cash league 4.ročník | Redraft  | 12    | 2-0, top of the table |
-| nfl.cz pripravka                      | Redraft  | 12    | 1-1                   |
-| Da Bears CZ/SK 2026                   | Redraft  | 12    | 1-1                   |
-| NFL.cz TGIT! liga                     | Redraft  | 32    | 3-1                   |
-| Enefel.cz Survival liga číslo 1       | Survival | 18    | alive, 9th on points  |
-| Enefel.cz Survival liga číslo 2       | Survival | 18    | alive, 1st on points  |
-| Posledný vypadáva!                    | Survival | 18    | alive, 2nd on points  |
+| League     | Type     | Teams | Record / standing     |
+| ---------- | -------- | ----- | --------------------- |
+| Dynasty A  | Dynasty  | 12    | 1-1                   |
+| Dynasty B  | Dynasty  | 10    | 1-1                   |
+| Redraft 1  | Redraft  | 12    | 2-0, top of the table |
+| Redraft 2  | Redraft  | 12    | 1-1                   |
+| Redraft 3  | Redraft  | 12    | 1-1                   |
+| Redraft 4  | Redraft  | 32    | 3-1                   |
+| Survival 1 | Survival | 18    | alive, 9th on points  |
+| Survival 2 | Survival | 18    | alive, 1st on points  |
+| Survival 3 | Survival | 18    | alive, 2nd on points  |
 
 Two dynasties, four redrafts, three survival leagues where the lowest score every week gets cut.
 
-[Your take: how did nine happen? Was it the nfl.cz community again?]
+[Your take: how did nine happen?]
 
 ## The dynasty that broke my heart is back
 
-Dynasty 2025 is the league from last year's post, the one where I went from a first-round bye to fourth place. The core is still there: Josh Allen, Jonathan Taylor, De'Von Achane, DeVonta Smith. Justin Jefferson and Travis Kelce are new in the lineup, and so is rookie Tetairoa McMillan.
+Dynasty A is the league from last year's post, the one where I went from a first-round bye to fourth place. The core is still there: Josh Allen, Jonathan Taylor, De'Von Achane, DeVonta Smith. Justin Jefferson and Travis Kelce are new in the lineup, and so is rookie Tetairoa McMillan.
 
 1-1 so far. [Your take: revenge tour or déjà vu?]
 
