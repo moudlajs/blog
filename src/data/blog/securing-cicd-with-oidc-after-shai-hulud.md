@@ -4,11 +4,8 @@ pubDatetime: 2026-01-13
 author: "Daniel Czetner"
 description: "Recent CI/CD attacks like the 'Shai-Hulud 2.0' worm highlight a critical vulnerability in many DevOps pipelines. The culprit? Static, long-lived secrets. The solution? OpenID Connect (OIDC)."
 tags:
-  - security
-  - ci-cd
-  - oidc
   - devops
-  - github-actions
+  - security
 ---
 
 In the world of software, we love automation. We build pipelines in GitHub Actions to test, build, and deploy our code seamlessly. But what if that same automation could be turned against us?
@@ -43,9 +40,7 @@ Here's how it works at a high level:
 
 The key is that **no permanent secret ever exists in your pipeline**. Even if an attacker compromises your runner, there is no secret to steal. The token they might find is only valid for a few minutes and is tightly scoped to that specific job. When the job is done, the access evaporates.
 
-In Microsoft Entra ID, this trust is configured on your application's "Federated credentials". It looks something like this:
-
-`[NOTE: Add screenshot from Entra ID showing the federated credential configuration for GitHub Actions here]`
+In Microsoft Entra ID, this trust is configured under your app registration's **Certificates & secrets → Federated credentials**. You pick "GitHub Actions deploying Azure resources", then name the organization, repository, and the entity allowed to log in (a branch, a tag, a pull request, or an environment).
 
 ### Hardening Your Pipelines: A Quick Cheat Sheet
 
@@ -64,8 +59,8 @@ permissions:
 4.  **Use the OIDC Login Action in Your Workflow:** Once your permissions are set, you can use the official `azure/login` action. Notice you don't need to provide a `secret`. The action handles the OIDC token exchange automatically.
 
 ```yaml
-- name: 'Az CLI login'
-  uses: azure/login@v1
+- name: "Az CLI login"
+  uses: azure/login@v2
   with:
     client-id: ${{ secrets.AZURE_CLIENT_ID }}
     tenant-id: ${{ secrets.AZURE_TENANT_ID }}

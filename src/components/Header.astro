@@ -20,6 +20,13 @@ const isActive = (path: string) => {
 
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
+
+const navLinks = [
+  { href: "/posts", label: "Posts" },
+  { href: "/projects", label: "Projects" },
+  ...(SITE.showBooks ? [{ href: "/books", label: "Books" }] : []),
+  { href: "/about", label: "About" },
+];
 ---
 
 <header>
@@ -32,106 +39,89 @@ const isActive = (path: string) => {
   </a>
   <div
     id="nav-container"
-    class="mx-auto flex max-w-app flex-col items-center justify-between sm:flex-row"
+    class="mx-auto flex max-w-app flex-wrap items-center justify-between gap-y-2 px-4 py-5 sm:py-8"
   >
-    <div
-      id="top-nav-wrap"
-      class="relative flex w-full items-center justify-between bg-background py-4 px-4 sm:py-8"
+    <a
+      href="/"
+      class="group inline-flex items-center gap-3 transition-colors hover:text-accent"
     >
-      <a
-        href="/"
-        class="group inline-flex items-center p-2 transition-colors hover:text-accent"
+      <img
+        src="/avatar.jpeg"
+        alt=""
+        width="56"
+        height="56"
+        class="size-12 rounded-full sm:size-14"
+      />
+      <span
+        class="font-mono text-xl font-semibold whitespace-nowrap sm:text-2xl"
       >
-        <img
-          src="/avatar.jpeg"
-          alt="DeeCee avatar"
-          class="w-20 h-20 rounded-full mr-3 sm:w-24 sm:h-24"
-        />
-        <div class="flex flex-col leading-tight">
-          <span class="text-2xl font-medium sm:text-3xl">DeeCee's</span>
-          <span class="text-2xl font-medium sm:text-3xl">blog</span>
-        </div>
-      </a>
-      <nav
-        id="nav-menu"
-        class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
+        {SITE.title}
+      </span>
+    </a>
+    <button
+      id="menu-btn"
+      class="focus-outline p-2 sm:hidden"
+      aria-label="Open Menu"
+      aria-expanded="false"
+      aria-controls="menu-items"
+    >
+      <IconX id="close-icon" class="hidden" />
+      <IconMenuDeep id="menu-icon" />
+    </button>
+    <nav id="nav-menu" class="basis-full sm:basis-auto">
+      <ul
+        id="menu-items"
+        class:list={[
+          "hidden flex-col items-stretch gap-1 border-t border-border pt-3",
+          "sm:flex sm:flex-row sm:items-center sm:gap-x-2 sm:border-0 sm:pt-0",
+        ]}
       >
-        <button
-          id="menu-btn"
-          class="focus-outline self-end p-2 sm:hidden"
-          aria-label="Open Menu"
-          aria-expanded="false"
-          aria-controls="menu-items"
-        >
-          <IconX id="close-icon" class="hidden" />
-          <IconMenuDeep id="menu-icon" />
-        </button>
-        <ul
-          id="menu-items"
-          class:list={[
-            "mt-4 grid w-44 grid-cols-2 place-content-center gap-2",
-            "[&>li>a]:block [&>li>a]:px-4 [&>li>a]:py-3 [&>li>a]:text-center [&>li>a]:font-medium sm:[&>li>a]:px-2 sm:[&>li>a]:py-1",
-            "hidden",
-            "sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0",
-          ]}
-        >
-          <li class="col-span-2">
-            <a
-              href="/posts"
-              class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
-            >
-              <span>Posts</span>
-            </a>
-          </li>
-          <li class="col-span-2">
-            <a
-              href="/projects"
-              class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
-            >
-              <span>Projects</span>
-            </a>
-          </li>
-          <li class="col-span-2">
-            <a
-              href="/books"
-              class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
-            >
-              <span>Books</span>
-            </a>
-          </li>
-          <li class="col-span-1 flex items-center justify-center">
-            <LinkButton
-              href="/search"
-              class:list={[
-                "focus-outline flex p-3 sm:p-1",
-                { "[&>svg]:stroke-accent": isActive("/search") },
-              ]}
-              ariaLabel="search"
-              title="Search"
-            >
-              <IconSearch />
-              <span class="sr-only">Search</span>
-            </LinkButton>
-          </li>
+        {
+          navLinks.map(link => (
+            <li>
+              <a
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                class:list={[
+                  "nav-parallelogram block px-3 py-2 font-semibold whitespace-nowrap sm:py-1",
+                  { "text-accent": isActive(link.href) },
+                ]}
+              >
+                <span>{link.label}</span>
+              </a>
+            </li>
+          ))
+        }
+        <li class="flex items-center gap-2 max-sm:mt-1 max-sm:px-1">
+          <LinkButton
+            href="/search"
+            class:list={[
+              "focus-outline flex p-2",
+              { "[&>svg]:stroke-accent": isActive("/search") },
+            ]}
+            ariaLabel="search"
+            title="Search"
+          >
+            <IconSearch />
+            <span class="sr-only">Search</span>
+          </LinkButton>
           {
             SITE.lightAndDarkMode && (
-              <li class="col-span-1 flex items-center justify-center">
-                <button
-                  id="theme-btn"
-                  class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent"
-                  title="Toggles light & dark"
-                  aria-label="auto"
-                  aria-live="polite"
-                >
-                  <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-                  <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-                </button>
-              </li>
+              <button
+                id="theme-btn"
+                class="focus-outline relative size-10 p-2 hover:[&>svg]:stroke-accent"
+                title="Toggles light & dark"
+                aria-label="auto"
+                aria-live="polite"
+              >
+                <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+              </button>
             )
           }
-        </ul>
-      </nav>
-    </div>
+        </li>
+      </ul>
+    </nav>
   </div>
   <Hr />
 </header>
@@ -152,6 +142,7 @@ const isActive = (path: string) => {
       menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
 
       menuItems.classList.toggle("hidden");
+      menuItems.classList.toggle("flex");
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });

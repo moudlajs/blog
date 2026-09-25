@@ -4,15 +4,13 @@ pubDatetime: 2025-12-30
 author: "Daniel Czetner"
 description: "As 2025 comes to a close, we look back at the most bizarre software bug of the year, and wonder: how on earth did this happen?"
 tags:
-  - bugs
-  - "2025"
-  - gaming
   - weird-tech
+  - humor
 ---
 
 As we close the book on 2025, it's time for a beloved tradition in the software world: looking back at the year's most spectacular failures. While major outages and security flaws dominated the headlines, there's one bug that deserves a special place in the hall of fame for its sheer, unadulterated weirdness.
 
-The award for the Weirdest Bug of 2025 goes, without a doubt, to the team behind *The Sims* for a truly unprecedented feature: a pregnant Grim Reaper.
+The award for the Weirdest Bug of 2025 goes, without a doubt, to the team behind _The Sims_ for a truly unprecedented feature: a pregnant Grim Reaper.
 
 ### An Unexpected Family Expansion
 
@@ -22,7 +20,7 @@ The most critical side effect? Vampires were at risk of starvation. According to
 
 ### How Does This Even Happen?
 
-While the exact cause remains a closely guarded secret, one can't help but speculate. In a game as complex as *The Sims*, every character is an object with a vast array of properties and potential states. A bug like this usually points to a hilarious, unintended interaction between systems.
+While the exact cause remains a closely guarded secret, one can't help but speculate. In a game as complex as _The Sims_, every character is an object with a vast array of properties and potential states. A bug like this usually points to a hilarious, unintended interaction between systems.
 
 Did the Grim Reaper object accidentally inherit a "canBecomePregnant" property from another character class? Was there a state management error where a pointer to a pregnant Sim was accidentally assigned to the Reaper? Did an AI routine go rogue and decide that Death itself should experience the miracle of life?
 

@@ -4,10 +4,8 @@ pubDatetime: 2025-12-31
 author: "Daniel Czetner"
 description: "Why engineers around the world held their breath last night, and the strange story of the second that never was."
 tags:
-  - leap-second
-  - timekeeping
-  - ntp
-  - os-dev
+  - weird-tech
+  - devops
 ---
 
 As the world counted down to midnight, engineers, sysadmins, and kernel developers were holding their breath for a different reason. They weren't worried about the ball dropping; they were worried about the clock stopping, jumping, or smearing. They were worried about the leap second.

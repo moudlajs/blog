@@ -7,7 +7,7 @@ Complete guide for customizing and debugging your Astro Paper blog. Since you fo
 ## 📁 Project Structure
 
 ```
-my-blog/
+blog/
 ├── src/
 │   ├── assets/          # Images, icons (imported in components)
 │   ├── components/      # Reusable UI components (.astro files)
@@ -247,7 +247,7 @@ git push                # Push to GitHub
 
 **Deployment not working?**
 
-1. Check GitHub Actions: https://github.com/moudlajs/my-blog/actions
+1. Check GitHub Actions: https://github.com/moudlajs/blog/actions
 2. Look for red X (failed build)
 3. Click on failed job to see error logs
 
@@ -441,10 +441,10 @@ Responsive:
    git push
    ```
    - Workflow runs automatically
-   - Check progress: https://github.com/moudlajs/my-blog/actions
+   - Check progress: https://github.com/moudlajs/blog/actions
 
 3. **Live at**:
-   - Default: `https://moudlajs.github.io/my-blog/`
+   - Default: `https://danielczetner.com/`
    - Custom domain: `https://danielczetner.com/` (after DNS setup)
 
 ### Custom Domain Setup

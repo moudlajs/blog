@@ -15,9 +15,9 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
-  --accent: #ff6b01;
+  --accent: #ff7a1a;
   --muted: #343f60;
-  --border: #ab4b08;
+  --border: #353e58;
 }
 
 @theme inline {
@@ -26,6 +26,8 @@ html[data-theme="dark"] {
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", monospace;
 }
 
 @layer base {
@@ -38,7 +40,7 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-sans text-foreground selection:bg-accent/75 selection:text-background;
   }
   a,
   button {
@@ -47,6 +49,17 @@ html[data-theme="dark"] {
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  nav,
+  time,
+  code,
+  kbd,
+  pre {
+    @apply font-mono;
   }
   section,
   footer {
@@ -75,7 +88,7 @@ html[data-theme="dark"] {
 }
 
 .animated-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -98,7 +111,7 @@ html[data-theme="dark"] {
 }
 
 .nav-parallelogram::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--color-accent);
@@ -120,9 +133,3 @@ html[data-theme="dark"] {
 .nav-parallelogram:hover {
   color: var(--color-background);
 }
-
-/* Article title hover - no color change needed, just underline */
-.article-hover-bg {
-  /* No special styles needed */
-}
-

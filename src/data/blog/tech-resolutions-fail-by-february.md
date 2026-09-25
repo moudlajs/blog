@@ -4,15 +4,12 @@ pubDatetime: 2026-01-06
 author: "Daniel Czetner"
 description: "Every year, developers make ambitious promises to themselves. Every year, those promises die quietly in February. Here are the classics."
 tags:
-  - tech-culture
-  - career
   - humor
-  - new-year
 ---
 
 It's January 2026. You've just rolled over into a new year, and like every developer with a Hacker News account, you've made The List.
 
-You know the one. The annual catalog of technical self-improvement promises that you're *definitely* going to follow through on this time. Unlike last year. And the year before that.
+You know the one. The annual catalog of technical self-improvement promises that you're _definitely_ going to follow through on this time. Unlike last year. And the year before that.
 
 Here are the greatest hits, ranked by how quickly they'll collapse.
 
@@ -20,7 +17,7 @@ Here are the greatest hits, ranked by how quickly they'll collapse.
 
 **Expected Duration**: 3 weeks
 
-Every year, thousands of developers download the Rust compiler, work through the first three chapters of *The Rust Book*, get confused by lifetimes, and quietly give up.
+Every year, thousands of developers download the Rust compiler, work through the first three chapters of _The Rust Book_, get confused by lifetimes, and quietly give up.
 
 You tell yourself it's because you're "too busy." The real reason is that Rust makes you feel stupid in ways JavaScript never did. Your brain, accustomed to the comforting chaos of `undefined is not a function`, recoils at borrow checker error messages that sound like you've personally offended the compiler.
 
@@ -32,7 +29,7 @@ By February, you're back to writing Node.js APIs and occasionally retweeting Rus
 
 **Expected Duration**: 1 sprint
 
-This is the resolution of the guilty. You *know* you should write tests. Everyone says so. Your tech lead mentions it in every retro. That one blog post you read was very convincing.
+This is the resolution of the guilty. You _know_ you should write tests. Everyone says so. Your tech lead mentions it in every retro. That one blog post you read was very convincing.
 
 So you start strong. You write unit tests for your new feature. You even hit 80% coverage. You feel virtuous.
 
@@ -62,7 +59,7 @@ By February, your commit messages have regressed to "fix," "wip," and "asdfasdf.
 
 **Expected Duration**: Until the next cool idea (approximately 10 days)
 
-You have 47 unfinished side projects. This year, you're going to be disciplined. You're going to finish *one thing* before starting another.
+You have 47 unfinished side projects. This year, you're going to be disciplined. You're going to finish _one thing_ before starting another.
 
 January 5th: You're making excellent progress on your HomeKit automation dashboard.
 
@@ -78,7 +75,7 @@ February 1st: All three projects are abandoned. You're researching embedded syst
 
 **Expected Duration**: 4 hours
 
-This is the resolution of the idealist. You're tired of copy-pasting code you don't understand. This year, you're going to read the documentation. You're going to truly *learn* the fundamentals.
+This is the resolution of the idealist. You're tired of copy-pasting code you don't understand. This year, you're going to read the documentation. You're going to truly _learn_ the fundamentals.
 
 9:00 AM: You encounter a bug. You open the official docs.
 
@@ -108,7 +105,7 @@ Day 3: Your alarm goes off. You snooze it. You wake up at 8:45 AM, late for work
 
 **Expected Duration**: Until you read a project's CONTRIBUTING.md
 
-You've been *using* open source for years. It's time to give back. You'll find a project, fix some bugs, submit PRs. How hard can it be?
+You've been _using_ open source for years. It's time to give back. You'll find a project, fix some bugs, submit PRs. How hard can it be?
 
 You pick a popular repo. You read the contributing guidelines. There's a 47-step process involving linting, testing, signing a CLA, running pre-commit hooks, and adhering to a commit message format that requires a PhD to understand.
 
@@ -134,4 +131,4 @@ And honestly? That's enough.
 
 ---
 
-*P.S. - I'm definitely going to learn Rust this year. For real this time. I'm very serious.*
+_P.S. - I'm definitely going to learn Rust this year. For real this time. I'm very serious._

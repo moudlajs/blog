@@ -22,6 +22,7 @@ npm run preview
 
 1. Create a new `.md` file in `src/data/blog/`
 2. Add frontmatter:
+
 ```yaml
 ---
 title: "Your Post Title"
@@ -33,6 +34,7 @@ tags:
   - tag2
 ---
 ```
+
 3. Write your content in Markdown
 4. Push to GitHub - CI/CD will deploy automatically
 
