@@ -1,4 +1,4 @@
-# DeeCee's Blog
+# dan@czetner
 
 Personal blog built with Astro Paper theme. DevOps engineering, fantasy football analysis, and technical writing.
 

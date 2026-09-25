@@ -21,6 +21,11 @@ const isActive = (path: string) => {
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
 
+// Shell-style prompt path for the header: "~" on the home page,
+// "~/posts" anywhere under /posts, and so on.
+const firstSegment = currentPath.split("/").filter(Boolean)[0];
+const promptPath = firstSegment ? `~/${firstSegment}` : "~";
+
 const navLinks = [
   { href: "/posts", label: "Posts" },
   { href: "/projects", label: "Projects" },
@@ -41,10 +46,7 @@ const navLinks = [
     id="nav-container"
     class="mx-auto flex max-w-app flex-wrap items-center justify-between gap-y-2 px-4 py-5 sm:py-8"
   >
-    <a
-      href="/"
-      class="group inline-flex items-center gap-3 transition-colors hover:text-accent"
-    >
+    <a href="/" aria-label="Home" class="group inline-flex items-center gap-3">
       <img
         src="/avatar.jpeg"
         alt=""
@@ -53,9 +55,12 @@ const navLinks = [
         class="size-12 rounded-full sm:size-14"
       />
       <span
-        class="font-mono text-xl font-semibold whitespace-nowrap sm:text-2xl"
+        class="font-mono text-base font-semibold whitespace-nowrap sm:text-xl"
+        aria-hidden="true"
       >
-        {SITE.title}
+        <span class="max-[380px]:hidden">dan@czetner:</span><span
+          class="text-accent">{promptPath}</span
+        >$<span class="prompt-cursor"></span>
       </span>
     </a>
     <button
