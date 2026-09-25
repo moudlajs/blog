@@ -17,6 +17,9 @@ concurrency:
 
 jobs:
   build:
+    # Pages is switched off until the domain is pointed here. Set the repo
+    # variable PAGES_LIVE=true (and re-enable Pages) to start deploying.
+    if: vars.PAGES_LIVE == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
