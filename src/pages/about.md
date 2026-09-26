@@ -10,7 +10,6 @@ Hey, I'm Dan, Cloud Infrastructure engineer by day, fantasy football analyst by 
 - **Tech.** Pipelines, cloud, security, and the bugs that only reproduce when someone's watching.
 - **Side projects.** Mostly an excuse to learn something else.
 - **Fantasy football.** _The Wire_ is set in Baltimore, so when I got into the NFL, the Ravens were the only possible choice. I play on Sleeper.
-- **Fun stuff.** Short posts about whatever made me laugh that week.
 - **The rest.** Unsorted.
 
 ## Why
